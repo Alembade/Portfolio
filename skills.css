@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('tech-background.jpg') repeat;
+    opacity: 0.2; /* Adjust the opacity of the background animation */
+    pointer-events: none; /* Allow interaction with underlying elements */
+    z-index: -1;
+    animation: techBackground 20s linear infinite; /* Adjust the animation speed and style */
+}
+
+@keyframes techBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+#nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+#nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#nav li {
+    display: inline;
+    float: left;
+}
+
+#nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#nav a:hover {
+    background-color: #555;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap; /* Allow skills to wrap to the next row on smaller screens */
+    justify-content: space-between;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.skill-box {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+    border-radius: 10px;
+    margin: 10px;
+    text-align: justify;
+    animation: fadeIn 1.5s ease-out; /* Add fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.skill-box h2 {
+    color: #333;
+    font-size: 1.5em;
+}
+
+.skill-box p {
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Social icons for LinkedIn */
+footer a.linkedin {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 1.5em;
+}
+
+/* Stylish phone and email styling */
+footer span {
+    display: block;
+    font-size: 1.2em;
+}

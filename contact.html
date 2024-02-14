@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="about.css"> <!-- Link to about.css -->
+    <link rel="stylesheet" type="text/css" href="contact.css"> <!-- Additional stylesheet for specific contact page styles -->
+</head>
+<body>
+    <header>
+        <h1>Portfolio</h1>
+    </header>
+    <div id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    <section>
+        <div id="container">
+            <div id="right">
+                <div id="content">
+                    <form id="contactForm" action="http://stungeye.com/school/webdev/thankyou.php" method="post">
+                        <div>
+                            <ul>
+                                <li>
+                                    <label for="fullName">Full Name:</label>
+                                    <input type="text" autofocus id="fullName" name="fullName" />
+                                </li>
+                                <li>
+                                    <div class="error" id="fullName_error">*Please enter your full name</div>
+                                </li>
+                                <li>
+                                    <label for="email">Email:</label>
+                                    <input type="text" id="email" name="email" />
+                                </li>
+                                <li>
+                                    <div class="error" id="email_error">*Please enter your email</div>
+                                    <div class="emailError error" id="emailformat_error">* Invalid email address</div>
+                                </li>
+                                <li>
+                                    <label for="phoneNumber">Phone Number:</label>
+                                    <input type="tel" id="phoneNumber" name="phoneNumber"  />
+                                </li>
+                                <li>
+                                    <div class="error" id="phoneNumber_error">*Please enter your Phone number</div>
+                                    <div class="phoneError error" id="phoneformat_error">* Invalid phone number</div>
+                                </li>
+                                <li>
+                                    <label for="comment">Comments:</label>
+                                    <textarea id= "comment" rows="4" cols="20" name="comment"></textarea>
+                                </li>
+                                <li>
+                                    <div class="error" id="comment_error">*Please write a comment</div>
+                                </li>
+                                <li>
+                                    <button id="calcButton" type="submit">Submit</button>
+                                    <button id="resetButton" type="reset">Reset</button>
+                                </li>
+                            </ul>   
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
